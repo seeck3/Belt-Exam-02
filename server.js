@@ -47,7 +47,7 @@ app.use(function (request, response, next) {
 
   next();
 })
-app.use(express.static(path.resolve('dist'))); //ng build
+app.use(express.static(path.resolve('dist/beltexam'))); //ng build
 app.use('/api', require('./server/routes'));
 // use this code 맨 아래
 app.use(require('./server/routes/catch-all.route'));
