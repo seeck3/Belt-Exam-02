@@ -11,7 +11,7 @@ import { Movie } from '../models';
 })
 export class HttpService {
 
-  private readonly base = 'https://lit-temple-82702.herokuapp.com/movies';
+  private readonly base = '/api/movies';
   constructor(
     private readonly http: HttpClient,
 
