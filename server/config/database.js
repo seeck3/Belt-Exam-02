@@ -6,10 +6,12 @@ const reg = new RegExp('\\.js$', 'i')
 const modelsPath = path.resolve('server/models');
 // const modelsPath = path.join(__dirname, '../models');
 
-
-mongoose.connect('mongodb://localhost:27017/beltexam02', {
+mongoose.connect('mongodb://seeck3:ehdcks85@ds163683.mlab.com:63683/squish-movie', {
   useNewUrlParser: true,
 });
+// mongoose.connect('mongodb://localhost:27017/beltexam02', {
+//   useNewUrlParser: true,
+// });
 
 
 mongoose.connection.on('connected', () => console.log('MongDB connected'));
