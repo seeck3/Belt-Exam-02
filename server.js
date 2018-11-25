@@ -8,7 +8,7 @@ const logger = require('morgan');
 const socketIO = require('socket.io');
 
 const app = express();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 8000;
 const sessionConfig = {
   saveUninitialized: true,
   secret: 'sessionsecret',
