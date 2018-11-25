@@ -8,8 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "foreman": "nf",
-    "postinstall": "ng build --aot --prod"
+    "foreman": "nf"
   },
   "engines": {
     "node": "8.11.4",
