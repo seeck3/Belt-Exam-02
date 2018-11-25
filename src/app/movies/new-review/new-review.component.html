@@ -1,0 +1,54 @@
+<fieldset>
+  <legend>Add a review for {{ movie?.title }}</legend>
+
+  <!-- <div *ngIf='errors.length'>
+      <ul class='alert alert-danger'>
+        <li *ngFor='let error of errors'>{{error}}</li>
+      </ul>
+
+    </div> -->
+
+  <form class='form-group' (submit)='onSubmit(movie._id, form)' #form='ngForm'>
+    <div>
+      <label for="">Your name :</label>
+
+      <input class='form-control' type="text" name="name" ngModel #name='ngModel' required minlength="3">
+      <div>
+
+        <div *ngIf='name?.errors?.required'>Name is required</div>
+        <div *ngIf='name?.errors?.minlength'>Name must be at least 3 characters</div>
+        <br>
+      </div>
+    </div>
+    <div>
+      <label for="">Stars :</label>
+      <select class='form-control' type="text" name="star" ngModel #star='ngModel' required>
+        <option value=""></option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+
+      <!-- <div class="error" *ngIf='star.invalid && (star.dirty || star.touched)'> -->
+      <div>
+        <div *ngIf='star?.errors?.required'>Star is required</div>
+        <br>
+      </div>
+      <div>
+        <label for="">Your review :</label>
+        <textarea class='form-control' name="review" row='5' ngModel #review='ngModel' required minlength="3"></textarea>
+      </div>
+      <div>
+        <div *ngIf='review?.errors?.required'>Review is required</div>
+        <br>
+      </div>
+
+    </div>
+
+    <button class='btn' *ngIf='form.valid'>Submit</button>
+  </form>
+  <button class='btn' [routerLink]='["/movies"]'>Cancel</button>
+</fieldset>

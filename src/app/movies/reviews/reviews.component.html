@@ -1,0 +1,33 @@
+<section>
+  <a class='btn' routerLink='/'>Home</a>
+  <button class='btn btn-link' (click)='onDelete(movie._id)'>Delete Movie</button>
+  <fieldset>
+    <legend>Review For {{ movie?.title }}</legend>
+    <!-- <button class='add' [routerLink]='["new"]'>Add a new movie</button> -->
+    <table class='table table-striped'>
+      <thead>
+        <th>Reviewer</th>
+        <th>Stars</th>
+        <th>Reviews</th>
+        <th>Actions</th>
+      </thead>
+
+      <tbody>
+        <!-- <tr *ngFor='let name of movie?.name let star of movie?.star let review of movie?.review'> -->
+        <tr *ngFor='let m of movie?.reviews'>
+          <td>{{ m.name }}</td>
+          <td>{{ m.star }} </td>
+          <td>{{ m.review }} </td>
+          <td>
+            <button class='btn btn-warning' [routerLink]="['refresh']" (click)='onReviewDelete(movie._id, m._id)'>Delete
+              Review</button>
+          </td>
+          <!-- <td (click)='onEvent($event)'>
+            <button [routerLink]='movie._id' class='btn'>Read reviews</button>
+            <button [routerLink]='["/movies", movie._id, "review" ]' class='btn'>Write review</button>
+          </td> -->
+        </tr>
+      </tbody>
+    </table>
+  </fieldset>
+</section>
