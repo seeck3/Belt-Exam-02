@@ -6,7 +6,7 @@ const reg = new RegExp('\\.js$', 'i')
 const modelsPath = path.resolve('server/models');
 // const modelsPath = path.join(__dirname, '../models');
 
-mongoose.connect('mongodb://seeck3:ehdcks85@ds163683.mlab.com:53198/heroku_mc15nx4d', {
+mongoose.connect('mongodb://heroku_2lj0fd9c:ehdcks85@ds231133.mlab.com:31133/heroku_2lj0fd9c', {
   useNewUrlParser: true,
 });
 // mongoose.connect('mongodb://localhost:27017/beltexam02', {
