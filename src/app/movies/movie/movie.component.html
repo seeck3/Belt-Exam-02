@@ -12,8 +12,8 @@
       <tbody>
         <tr *ngFor='let movie of movies; let i = index'>
           <td>{{ movie.title }}</td>
-          <td><span *ngIf='star[i] > 0'>{{ star[i] / avg[i].length }}</span>
-            <span *ngIf='star[i] = 0'>0</span> &#9733;</td>
+          <td><span *ngIf='star[i] !== 0'>{{ star[i] / avg[i].length }}</span>
+            <span *ngIf='star[i] === 0'>0</span> &#9733;</td>
           <td>
             <button [routerLink]='movie._id' class='btn'>Read reviews</button>
             <button [routerLink]='["/movies", movie._id, "review" ]' class='btn'>Write review</button>
