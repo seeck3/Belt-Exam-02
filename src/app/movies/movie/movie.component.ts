@@ -11,7 +11,7 @@ import { platformBrowserDynamicTesting } from '@angular/platform-browser-dynamic
 })
 export class MovieComponent implements OnInit {
   movies: Movie[] = [];
-  star = [];
+  star = [0];
   avg = [];
   s: any;
   constructor(
